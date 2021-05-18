@@ -1,7 +1,5 @@
 package guru.springframework.model;
 
-import org.springframework.web.servlet.view.script.ScriptTemplateConfig;
-
 public class Person {
 
     private String firstName;
