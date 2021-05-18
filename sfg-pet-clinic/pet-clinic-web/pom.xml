@@ -22,7 +22,7 @@
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>guru.springframework</groupId>
-            <version>0.0.5</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -96,12 +96,12 @@
         </dependency>
     </dependencies>
 
-    <build>
+   <!-- <build>
         <plugins>
             <plugin>
-     <!--           <groupId>ro.isdc.wro4j</groupId>
+                <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
-                <version>${wro4j.version}</version>-->
+                <version>${wro4j.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-resources</phase>
@@ -131,5 +131,5 @@
                 </dependencies>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
