@@ -3,9 +3,6 @@ package guru.springframework.model;
 import java.util.Date;
 
 public class PetType extends BaseEntity {
-
-    private Date date;
-
     private String name;
 
     public String getName() {

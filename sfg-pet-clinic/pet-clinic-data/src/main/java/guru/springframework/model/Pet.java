@@ -5,9 +5,6 @@ import java.util.Date;
 
 public class Pet extends  BaseEntity{
 
-    private Date date;
-
-
     private PetType petType;
     private Owner owner;
     private LocalDate bDay;
