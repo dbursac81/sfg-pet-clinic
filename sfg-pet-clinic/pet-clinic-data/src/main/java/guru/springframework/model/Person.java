@@ -1,6 +1,11 @@
 package guru.springframework.model;
 
+import java.util.Date;
+
 public class Person  extends  BaseEntity{
+
+    private Date date;
+
 
     private String firstName;
     private String lastName;

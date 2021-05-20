@@ -78,6 +78,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -96,9 +98,9 @@
         </dependency>
     </dependencies>
 
-   <!-- <build>
+    <build>
         <plugins>
-            <plugin>
+          <!--  <plugin>
                 <groupId>ro.isdc.wro4j</groupId>
                 <artifactId>wro4j-maven-plugin</artifactId>
                 <version>${wro4j.version}</version>
@@ -129,7 +131,7 @@
                         <version>2.23.0</version>
                     </dependency>
                 </dependencies>
-            </plugin>
+            </plugin>-->
         </plugins>
-    </build>-->
+    </build>
 </project>
