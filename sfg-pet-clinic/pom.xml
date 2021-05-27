@@ -38,6 +38,7 @@
         <wro4j.version>1.8.0</wro4j.version>
     </properties>
 
+<!--    DEPENDENCIES-->
     <dependencies>
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -81,6 +82,7 @@
         </dependency>
     </dependencies>
 
+<!--    PLUGINS-->
     <build>
         <plugins>
             <plugin>
