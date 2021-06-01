@@ -1,13 +1,25 @@
 package guru.springframework.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name="pets")
 public class Pet extends BaseEntity {
 
+    @Column(name = "name")
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name="type_id")
     private PetType petType;
+
+    @ManyToOne
+    @Column(name = "owner_id")
     private Owner owner;
-    private LocalDate bDay;
+
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
 
 
     public String getName() {
@@ -35,11 +47,11 @@ public class Pet extends BaseEntity {
     }
 
     public LocalDate getbDay() {
-        return bDay;
+        return birthDate;
     }
 
     public void setbDay(LocalDate bDay) {
-        this.bDay = bDay;
+        this.birthDate = bDay;
     }
 
 
