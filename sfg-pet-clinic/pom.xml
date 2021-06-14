@@ -30,50 +30,19 @@
         <jaxb.version>2.3.0</jaxb.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-
-        <!-- Web dependencies -->
-        <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
-        <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
-        <webjars-jquery.version>2.2.4</webjars-jquery.version>
-        <wro4j.version>1.8.0</wro4j.version>
     </properties>
 
-<!--    DEPENDENCIES-->
     <dependencies>
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>${jaxb.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
             <version>${jaxb.version}</version>
         </dependency>
-
-        <!-- webjars -->
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>${webjars-jquery.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery-ui</artifactId>
-            <version>${webjars-jquery-ui.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>${webjars-bootstrap.version}</version>
-        </dependency>
-        <!-- end of webjars -->
-
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
@@ -81,72 +50,30 @@
         </dependency>
     </dependencies>
 
-<!--    PLUGINS-->
     <build>
         <plugins>
-            <plugin>
-                <groupId>ro.isdc.wro4j</groupId>
-                <artifactId>wro4j-maven-plugin</artifactId>
-                <version>1.10.1</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <?m2e execute onConfiguration,onIncremental?>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
-                    <cssDestinationFolder>${project.build.directory}/classes/static/resources/css</cssDestinationFolder>
-                    <wroFile>${basedir}/src/main/wro/wro.xml</wroFile>
-                    <extraConfigFile>${basedir}/src/main/wro/wro.properties</extraConfigFile>
-                    <contextFolder>${basedir}/src/main/less</contextFolder>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.webjars</groupId>
-                        <artifactId>bootstrap</artifactId>
-                        <version>${webjars-bootstrap.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.mockito</groupId>
-                        <artifactId>mockito-core</artifactId>
-                        <version>${mockito.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.projectlombok</groupId>
-                        <artifactId>lombok</artifactId>
-                        <optional>true</optional>
-                        <version>1.18.2</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-          <!--  <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M4</version>
                 <configuration>
                     <goals>install</goals>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
-            </plugin>-->
-<!--            <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>2.22.0</version>
                 <configuration>
                     <argLine>
-                        &#45;&#45;illegal-access=permit
+                        --illegal-access=permit
                     </argLine>
                 </configuration>
-            </plugin>-->
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -169,8 +96,8 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:dbursac81/sfg-pet-clinic.git</developerConnection>
-        <tag>sfg-pet-clinic-0.0.5</tag>
+        <developerConnection>scm:git:git@github.com:springframeworkguru/sfg-pet-clinic.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
 
 </project>

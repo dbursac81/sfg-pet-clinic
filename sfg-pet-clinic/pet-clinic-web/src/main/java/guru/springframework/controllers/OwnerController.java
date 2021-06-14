@@ -31,11 +31,23 @@ public class OwnerController {
         return "notimplemented";
     }
 
-    @GetMapping
+    @GetMapping("{ownerId}")
     public ModelAndView showOwner(@PathVariable("ownerId") Long ownerId){
+
         ModelAndView mav = new ModelAndView("owners/ownerDetails");
+
         mav.addObject(ownerService.findById(ownerId));
+
         return  mav;
     }
+/*
+    @GetMapping("/owners/{ownerId}")
+    public String ownerDetails(Model model, Long id){
+        model.addAttribute("owner", ownerService.findById(id));
+
+        return "owners/ownerDetails";
+    }*/
+
+
 
 }
